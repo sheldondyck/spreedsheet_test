@@ -7,6 +7,8 @@ namespace :db do
 end
 
 def make_data_source_1
-  DataSource.create!(:name => 'name 1',
-                      :value => 'value 1')
+  5.times {|n|
+      DataSource.create!(:name => "name #{n + 1}",
+                         :value => "value #{n + 1}")
+  }
 end

@@ -1,11 +1,11 @@
 %h1 Oh sheet!
 / jquerysheet
 %h2 jquerysheet
-#jqsheet1{:style => 'width:750px;height:500px;' }
+#jqsheet1{:style => 'width:750px;height:200px;' }
   %table
     %tbody
-      %tr
-        %td
+      %tr.row0
+        %td.row0.cell0
         %td
         %td
         %td
@@ -30,10 +30,30 @@
         %td
 :javascript
   $(function() {
-    $("#jqsheet1").sheet(
+    g_jqs = $("#jqsheet1").sheet(
     {
       editable: true
     });
+  });
+.ajax-answer
+:javascript
+  $.ajax({
+    url: '/api/v1/type_1.json',
+    data: {
+      id: 123
+    },
+    type: 'GET',
+    success: function(json) {
+      g_jqs.setCellValue(json.value, 1, 1);
+      $('.row0.cell0').html(json.value);
+      $('<h1/>').text(json.name).appendTo('.ajax-answer');
+      //$('<div>').html(json.value).appendTo('.ajax-answer');
+    },
+    error: function(xhr, status) {
+      alert("ops!");
+    },
+    complete: function(xhr, status) {
+    }
   });
 / slicksheet
 %h2 slicksheet
