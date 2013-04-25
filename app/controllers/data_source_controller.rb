@@ -1,6 +1,6 @@
 class DataSourceController < ApplicationController
   def type_1
-    @dt1 = DataSource.find(3)
+    @dt1 = DataSource.find(params[:id])
 
     respond_to do |format|
       format.html

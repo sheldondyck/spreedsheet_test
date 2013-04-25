@@ -1,7 +1,7 @@
 %h1 Oh sheet!
 / jquerysheet
 %h2 jquerysheet
-#jqsheet1{:style => 'width:750px;height:200px;' }
+#jqsheet1{:class => 'jQuerySheet', :style => 'width:800px;height:300px;' }
   %table
     %tbody
       %tr.row0
@@ -38,7 +38,7 @@
 .ajax-answer
 :javascript
   $.ajax({
-    url: '/api/v1/type_1.json',
+    url: '/api/v1/type_1/2.json',
     data: {
       id: 123
     },
@@ -46,7 +46,7 @@
     success: function(json) {
       g_jqs.setCellValue(json.value, 1, 1);
       $('.row0.cell0').html(json.value);
-      $('<h1/>').text(json.name).appendTo('.ajax-answer');
+      //$('<h1/>').text(json.name).appendTo('.ajax-answer');
       //$('<div>').html(json.value).appendTo('.ajax-answer');
     },
     error: function(xhr, status) {
@@ -56,9 +56,9 @@
     }
   });
 / slicksheet
-%h2 slicksheet
-#myGrid{:style => 'width:500px;height:500px;' }
-:javascript
+-#%h2 slicksheet
+-##myGrid{:style => 'width:500px;height:500px;' }
+-#:javascript
   var grid;
   var columns = [
     {id: "title", name: "Title", field: "title"},
