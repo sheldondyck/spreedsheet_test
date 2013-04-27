@@ -9430,6 +9430,36 @@ var jFN = jQuery.sheet.fn = {//fn = standard functions used in cells
   THISCOLCELL:function (row) {
     var jS = this.jS, loc = jS.getTdLocation(this.td);
     return jS.updateCellValue(this.sheet, row, loc.col);
+  },
+  MY:function (val) {
+    console.log('MY');
+    jS = this.jS;
+    var loc = jS.getTdLocation(this.td);
+    $.ajax({
+      url: '/api/v1/type_1/' + val + '.json',
+      data: {
+        row: loc.row,
+      col: loc.col
+      },
+      type: 'GET',
+      success: function(json) {
+        var s = jQuery.sheet;
+        console.log("ret: " + json.value);
+        $('.row' + json.row + '.col' + json.col).html(json.value);
+        //var jS = this.jS;
+        //var jS = jQuery(this).getSheet();
+        //g_jqs.setCellValue(json.value, json.row, json.col);
+        //$('<h1/>').text(json.name).appendTo('.ajax-answer');
+        //$('<div>').html(json.value).appendTo('.ajax-answer');
+      },
+      error: function(xhr, status) {
+        console.log("ops!");
+      },
+      complete: function(xhr, status) {
+        console.log("complete");
+      }
+    });
+    return "";
   }
 };
 

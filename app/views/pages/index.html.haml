@@ -4,30 +4,36 @@
 #jqsheet1{:class => 'jQuerySheet', :style => 'width:800px;height:300px;' }
   %table
     %tbody
-      %tr.row0
-        %td.row0.cell0
-        %td
-        %td
-        %td
-        %td
-      %tr
-        %td
-        %td
-        %td
-        %td
-        %td
-      %tr
-        %td
-        %td
-        %td
-        %td
-        %td
-      %tr
-        %td
-        %td
-        %td
-        %td
-        %td
+      %tr.row1
+        %td.row1.col1
+        %td.row1.col2
+        %td.row1.col3
+        %td.row1.col4
+        %td.row1.col5
+      %tr.row2
+        %td.row2.col1
+        %td.row2.col2
+        %td.row2.col3
+        %td.row2.col4
+        %td.row2.col5
+      %tr.row3
+        %td.row3.col1
+        %td.row3.col2
+        %td.row3.col3
+        %td.row3.col4
+        %td.row3.col5
+      %tr.row4
+        %td.row4.col1
+        %td.row4.col2
+        %td.row4.col3
+        %td.row4.col4
+        %td.row4.col5
+      %tr.row5
+        %td.row5.col1
+        %td.row5.col2
+        %td.row5.col3
+        %td.row5.col4
+        %td.row5.col5
 :javascript
   $(function() {
     g_jqs = $("#jqsheet1").sheet(
@@ -36,9 +42,9 @@
     });
   });
 .ajax-answer
-:javascript
+-#:javascript
   $.ajax({
-    url: '/api/v1/type_1/2.json',
+    url: '/api/v1/type_1/3.json',
     data: {
       id: 123
     },

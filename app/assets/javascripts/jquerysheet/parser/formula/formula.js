@@ -12,243 +12,243 @@ switch (yystate) {
 case 1:return $$[$0-1];
 break;
 case 2:
-			this.$ = yy.lexer.handler.variable.apply(yy.lexer.obj, $$[$0]);//js
+      this.$ = yy.lexer.handler.variable.apply(yy.lexer.obj, $$[$0]);//js
             //php this.$ = this->variable($$[$0]);
-		
+
 break;
 case 3:
-			this.$ = yy.lexer.handler.time.apply(yy.lexer.obj, [$$[$0], true]);//js
-		
+      this.$ = yy.lexer.handler.time.apply(yy.lexer.obj, [$$[$0], true]);//js
+
 break;
 case 4:
-			this.$ = yy.lexer.handler.time.apply(yy.lexer.obj, [$$[$0]]);//js
-		
+      this.$ = yy.lexer.handler.time.apply(yy.lexer.obj, [$$[$0]]);//js
+
 break;
 case 5:
-			this.$ = $$[$0] * 1;
+      this.$ = $$[$0] * 1;
 
-			if (isNaN(this.$)) this.$ = 0;//js
-		
+      if (isNaN(this.$)) this.$ = 0;//js
+
 break;
 case 6:
-			this.$ = $$[$0].substring(1, $$[$0].length - 1);//js
-			//php this.$ = substr($$[$0], 1, -1);
-		
+      this.$ = $$[$0].substring(1, $$[$0].length - 1);//js
+      //php this.$ = substr($$[$0], 1, -1);
+
 break;
 case 7:
-			//php this.$ = $$[$0-2] == $$[$0];
+      //php this.$ = $$[$0-2] == $$[$0];
 
-			this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, ['EQUAL', [$$[$0-2], $$[$0]]]);//js
-		
+      this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, ['EQUAL', [$$[$0-2], $$[$0]]]);//js
+
 break;
 case 8:
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.push(null);//js
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.push(null);//js
 
-			if (!isNaN($$[$0-2]) && !isNaN($$[$0])) {//js
-				this.$ = ($$[$0-2] * 1) + ($$[$0] * 1);//js
-			} else {//js
-				this.$ = yy.lexer.handler.concatenate.apply(yy.lexer.obj, [$$[$0-2],$$[$0]]);//js
-			}//js
+      if (!isNaN($$[$0-2]) && !isNaN($$[$0])) {//js
+        this.$ = ($$[$0-2] * 1) + ($$[$0] * 1);//js
+      } else {//js
+        this.$ = yy.lexer.handler.concatenate.apply(yy.lexer.obj, [$$[$0-2],$$[$0]]);//js
+      }//js
 
-			//php if (is_numeric($$[$0-2]) && is_numeric($$[$0])) {
-			//php   this.$ = $$[$0-2] + $$[$0];
-			//php } else {
-			//php   this.$ = $$[$0-2] . $$[$0];
-			//php }
-		
+      //php if (is_numeric($$[$0-2]) && is_numeric($$[$0])) {
+      //php   this.$ = $$[$0-2] + $$[$0];
+      //php } else {
+      //php   this.$ = $$[$0-2] . $$[$0];
+      //php }
+
 break;
 case 9:this.$ = $$[$0-1] * 1;
 break;
 case 10:
-			//php this.$ = ($$[$0-3] * 1) <= ($$[$0] * 1);
-			this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, ['LESS_EQUAL', [$$[$0-3], $$[$0-1]]]);//js
-		
+      //php this.$ = ($$[$0-3] * 1) <= ($$[$0] * 1);
+      this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, ['LESS_EQUAL', [$$[$0-3], $$[$0-1]]]);//js
+
 break;
 case 11:
-			//php this.$ = ($$[$0-3] * 1) >= ($$[$0] * 1);
-			this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, ['GREATER_EQUAL', [$$[$0-3], $$[$0-1]]]);//js
-		
+      //php this.$ = ($$[$0-3] * 1) >= ($$[$0] * 1);
+      this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, ['GREATER_EQUAL', [$$[$0-3], $$[$0-1]]]);//js
+
 break;
 case 12:
-			this.$ = ($$[$0-3] * 1) != ($$[$0] * 1);
+      this.$ = ($$[$0-3] * 1) != ($$[$0] * 1);
 
-			if (isNaN(this.$)) this.$ = 0;//js
+      if (isNaN(this.$)) this.$ = 0;//js
 
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.push(null);//js
-		
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.push(null);//js
+
 break;
 case 13:
-			this.$ = $$[$0-2] != $$[$0];
+      this.$ = $$[$0-2] != $$[$0];
 
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.push(null);//js
-		
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.push(null);//js
+
 break;
 case 14:
-			//php this.$ = ($$[$0-2] * 1) > ($$[$0] * 1);
+      //php this.$ = ($$[$0-2] * 1) > ($$[$0] * 1);
 
-			this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, ['GREATER', [$$[$0-2], $$[$0]]]);//js
-		
+      this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, ['GREATER', [$$[$0-2], $$[$0]]]);//js
+
 break;
 case 15:
-			//php this.$ = ($$[$0-2] * 1) < ($$[$0] * 1);
+      //php this.$ = ($$[$0-2] * 1) < ($$[$0] * 1);
 
-			this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, ['LESS', [$$[$0-2], $$[$0]]]);//js
-		
+      this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, ['LESS', [$$[$0-2], $$[$0]]]);//js
+
 break;
 case 16:
-			this.$ = ($$[$0-2] * 1) - ($$[$0] * 1);
+      this.$ = ($$[$0-2] * 1) - ($$[$0] * 1);
 
-			if (isNaN(this.$)) this.$ = 0;//js
+      if (isNaN(this.$)) this.$ = 0;//js
 
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.push(null);//js
-		
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.push(null);//js
+
 break;
 case 17:
-			this.$ = ($$[$0-2] * 1) * ($$[$0] * 1);
+      this.$ = ($$[$0-2] * 1) * ($$[$0] * 1);
 
-			if (isNaN(this.$)) this.$ = 0;//js
+      if (isNaN(this.$)) this.$ = 0;//js
 
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.push(null);//js
-		
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.push(null);//js
+
 break;
 case 18:
-			this.$ = ($$[$0-2] * 1) / ($$[$0] * 1);
+      this.$ = ($$[$0-2] * 1) / ($$[$0] * 1);
 
-			if (isNaN(this.$)) this.$ = 0;//js
+      if (isNaN(this.$)) this.$ = 0;//js
 
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.push(null);//js
-		
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.push(null);//js
+
 break;
 case 19:
-			this.$ = Math.pow(($$[$0-2] * 1), ($$[$0] * 1));//js
+      this.$ = Math.pow(($$[$0-2] * 1), ($$[$0] * 1));//js
 
-			if (isNaN(this.$)) this.$ = 0;//js
+      if (isNaN(this.$)) this.$ = 0;//js
 
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.pop();//js
-			yy.lexer.obj.html.push(null);//js
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.pop();//js
+      yy.lexer.obj.html.push(null);//js
 
-			//php this.$ = pow(($$[$0-2] * 1), ($$[$0] * 1));
-		
+      //php this.$ = pow(($$[$0-2] * 1), ($$[$0] * 1));
+
 break;
 case 20:
-			this.$ = $$[$0] * -1;
-			if (isNaN(this.$)) this.$ = 0;//js
-		
+      this.$ = $$[$0] * -1;
+      if (isNaN(this.$)) this.$ = 0;//js
+
 break;
 case 21:
-			this.$ = $$[$0] * 1;
-			if (isNaN(this.$)) this.$ = 0;//js
-		
+      this.$ = $$[$0] * 1;
+      if (isNaN(this.$)) this.$ = 0;//js
+
 break;
 case 22:/*this.$ = Math.E;*/;
 break;
 case 23:
-			this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, [$$[$0-2], '']);//js
-			//php this.$ = this->callFunction($$[$0-2]);
-		
+      this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, [$$[$0-2], '']);//js
+      //php this.$ = this->callFunction($$[$0-2]);
+
 break;
 case 24:
-			this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, [$$[$0-3], $$[$0-1]]);//js
-			//php this.$ = this->callFunction($$[$0-3], $$[$0-1]);
-		
+      this.$ = yy.lexer.handler.callFunction.apply(yy.lexer.obj, [$$[$0-3], $$[$0-1]]);//js
+      //php this.$ = this->callFunction($$[$0-3], $$[$0-1]);
+
 break;
 case 28:
-			this.$ = yy.lexer.handler.fixedCellValue.apply(yy.lexer.obj, [$$[$0]]);//js
-			//php this.$ = this->fixedCellValue($$[$0]);
-		
+      this.$ = yy.lexer.handler.fixedCellValue.apply(yy.lexer.obj, [$$[$0]]);//js
+      //php this.$ = this->fixedCellValue($$[$0]);
+
 break;
 case 29:
-			this.$ = yy.lexer.handler.fixedCellRangeValue.apply(yy.lexer.obj, [$$[$0-2], $$[$0]]);//js
-			//php this.$ = this->fixedCellRangeValue($$[$0-2], $$[$0]);
-		
+      this.$ = yy.lexer.handler.fixedCellRangeValue.apply(yy.lexer.obj, [$$[$0-2], $$[$0]]);//js
+      //php this.$ = this->fixedCellRangeValue($$[$0-2], $$[$0]);
+
 break;
 case 30:
-			this.$ = yy.lexer.handler.cellValue.apply(yy.lexer.obj, [$$[$0]]);//js
-			//php this.$ = this->cellValue($$[$0]);
-		
+      this.$ = yy.lexer.handler.cellValue.apply(yy.lexer.obj, [$$[$0]]);//js
+      //php this.$ = this->cellValue($$[$0]);
+
 break;
 case 31:
-			this.$ = yy.lexer.handler.cellRangeValue.apply(yy.lexer.obj, [$$[$0-2], $$[$0]]);//js
-			//php this.$ = this->cellRangeValue($$[$0-2], $$[$0]);
-		
+      this.$ = yy.lexer.handler.cellRangeValue.apply(yy.lexer.obj, [$$[$0-2], $$[$0]]);//js
+      //php this.$ = this->cellRangeValue($$[$0-2], $$[$0]);
+
 break;
 case 32:
-			this.$ = yy.lexer.handler.remoteCellValue.apply(yy.lexer.obj, [$$[$0-2], $$[$0]]);//js
-			//php this.$ = this->remoteCellValue($$[$0-2], $$[$0]);
-		
+      this.$ = yy.lexer.handler.remoteCellValue.apply(yy.lexer.obj, [$$[$0-2], $$[$0]]);//js
+      //php this.$ = this->remoteCellValue($$[$0-2], $$[$0]);
+
 break;
 case 33:
-			this.$ = yy.lexer.handler.remoteCellRangeValue.apply(yy.lexer.obj, [$$[$0-4], $$[$0-2], $$[$0]]);//js
-			//php this.$ = this->remoteCellRangeValue($$[$0-4], $$[$0-2], $$[$0]);
-		
+      this.$ = yy.lexer.handler.remoteCellRangeValue.apply(yy.lexer.obj, [$$[$0-4], $$[$0-2], $$[$0]]);//js
+      //php this.$ = this->remoteCellRangeValue($$[$0-4], $$[$0-2], $$[$0]);
+
 break;
 case 34:
-			this.$ = [$$[$0]];//js
-			//php this.$ = array($$[$0]);
-		
+      this.$ = [$$[$0]];//js
+      //php this.$ = array($$[$0]);
+
 break;
 case 35:
-	        $$[$0-2].push($$[$0]);//js
-	        this.$ = $$[$0-2];//js
+          $$[$0-2].push($$[$0]);//js
+          this.$ = $$[$0-2];//js
 
-			//php $$[$0-2][] = $$[$0];
-			//php this.$ = $$[$0-2];
-	    
+      //php $$[$0-2][] = $$[$0];
+      //php this.$ = $$[$0-2];
+
 break;
 case 36:
-	        $$[$0-2].push($$[$0]);//js
-	        this.$ = $$[$0-2];//js
+          $$[$0-2].push($$[$0]);//js
+          this.$ = $$[$0-2];//js
 
-			//php $$[$0-2][] = $$[$0];
-			//php this.$ = $$[$0-2];
-	    
+      //php $$[$0-2][] = $$[$0];
+      //php this.$ = $$[$0-2];
+
 break;
 case 37:
-			this.$ = [$$[$0]];//js
-			//php this.$ = array($$[$0]);
-		
+      this.$ = [$$[$0]];//js
+      //php this.$ = array($$[$0]);
+
 break;
 case 38:
-			this.$ = ($.isArray($$[$0-2]) ? $$[$0-2] : [$$[$0-2]]);//js
+      this.$ = ($.isArray($$[$0-2]) ? $$[$0-2] : [$$[$0-2]]);//js
             this.$.push($$[$0]);//js
 
             //php this.$ = (is_array($$[$0-2]) ? $$[$0-2] : array());
             //php this.$[] = $$[$0];
-		
+
 break;
 case 39:
-			this.$ = $$[$0] * 1;
-		
+      this.$ = $$[$0] * 1;
+
 break;
 case 40:
-			this.$ = ($$[$0-2] + '.' + $$[$0]) * 1;//js
-			//php this.$ = $$[$0-2] . '.' . $$[$0];
-		
+      this.$ = ($$[$0-2] + '.' + $$[$0]) * 1;//js
+      //php this.$ = $$[$0-2] . '.' . $$[$0];
+
 break;
 case 41:
-			this.$ = $$[$0-1] * 0.01;
-		
+      this.$ = $$[$0-1] * 0.01;
+
 break;
 case 42:
-			this.$ = $$[$0-2] + $$[$0-1] + $$[$0];
-      	
+      this.$ = $$[$0-2] + $$[$0-1] + $$[$0];
+
 break;
 case 43:
-			this.$ = $$[$0-2] + $$[$0-1] + $$[$0];
-		
+      this.$ = $$[$0-2] + $$[$0-1] + $$[$0];
+
 break;
 }
 },
@@ -332,7 +332,7 @@ parse: function parse(input) {
                 if (this.lexer.showPosition) {
                     errStr = 'Parse error on line '+(yylineno+1)+":\n"+this.lexer.showPosition()+"\nExpecting "+expected.join(', ') + ", got '" + (this.terminals_[symbol] || symbol)+ "'";
                 } else {
-                    errStr = 'Parse error on line '+(yylineno+1)+": Unexpected " +
+                    errStr = 'Parse error on line '+(yylineno+1)+": Unexpected "
                                   (symbol == 1 /*EOF*/ ? "end of input" :
                                               ("'"+(this.terminals_[symbol] || symbol)+"'"));
                 }
@@ -635,26 +635,26 @@ break;
 case 5:return 8;
 break;
 case 6:
-	if (yy.lexer.obj.type == 'cell') return 29;//js
-	return 'VARIABLE';//js
+  if (yy.lexer.obj.type == 'cell') return 29;//js
+  return 'VARIABLE';//js
 
-	//php if ($this->type == 'cell') return 'SHEET';
-	//php return 'VARIABLE';
+  //php if ($this->type == 'cell') return 'SHEET';
+  //php return 'VARIABLE';
 
 break;
 case 7:
-	if (yy.lexer.obj.type == 'cell') return 26;//js
-	return 'VARIABLE';//js
+  if (yy.lexer.obj.type == 'cell') return 26;//js
+  return 'VARIABLE';//js
 
-	//php if ($this->type == 'cell') return 'FIXEDCELL';
+  //php if ($this->type == 'cell') return 'FIXEDCELL';
     //php return 'VARIABLE';
 
 break;
 case 8:
-	if (yy.lexer.obj.type == 'cell') return 28;//js
-	return 'VARIABLE';//js
+  if (yy.lexer.obj.type == 'cell') return 28;//js
+  return 'VARIABLE';//js
 
-	//php if ($this->type == 'cell') return 'CELL';
+  //php if ($this->type == 'cell') return 'CELL';
     //php return 'VARIABLE';
 
 break;
