@@ -22,13 +22,6 @@ ActiveRecord::Schema.define(:version => 20130428185841) do
 
   add_index "countries", ["name"], :name => "index_countries_on_name"
 
-  create_table "data_sources", :force => true do |t|
-    t.string   "name"
-    t.string   "value"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "gdp_statistics", :force => true do |t|
     t.integer  "country_id"
     t.date     "year"

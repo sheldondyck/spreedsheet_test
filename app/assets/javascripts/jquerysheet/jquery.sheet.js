@@ -9435,12 +9435,12 @@ var jFN = jQuery.sheet.fn = {//fn = standard functions used in cells
     var jS = this.jS, loc = jS.getTdLocation(this.td);
     return jS.updateCellValue(this.sheet, row, loc.col);
   },
-  MY:function (val) {
-    console.log('MY');
+  GDP:function (country, year) {
+    console.log('GDP');
     jS = this.jS;
     var loc = jS.getTdLocation(this.td);
     $.ajax({
-      url: '/api/v1/type_1/' + val + '.json',
+      url: '/api/v1/gdp/' + country + '/' + year + '.json',
       data: {
         row: loc.row,
         col: loc.col
