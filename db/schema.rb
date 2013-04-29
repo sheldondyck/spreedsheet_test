@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130421133010) do
+ActiveRecord::Schema.define(:version => 20130428185841) do
+
+  create_table "countries", :force => true do |t|
+    t.string   "name"
+    t.string   "abbreviation"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "countries", ["name"], :name => "index_countries_on_name"
 
   create_table "data_sources", :force => true do |t|
     t.string   "name"
@@ -19,5 +28,16 @@ ActiveRecord::Schema.define(:version => 20130421133010) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "gdp_statistics", :force => true do |t|
+    t.integer  "country_id"
+    t.date     "year"
+    t.decimal  "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "gdp_statistics", ["country_id"], :name => "index_gdp_statistics_on_country_id"
+  add_index "gdp_statistics", ["year"], :name => "index_gdp_statistics_on_year"
 
 end
