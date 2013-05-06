@@ -12,5 +12,5 @@
  *= require bootstrap/bootstrap
  *= require pages
  *= require_tree ./slickgrid
- *= require_tree ./jquerysheet
+ *= require_tree ./jquerysheet_trunk
  */

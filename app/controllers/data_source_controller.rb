@@ -13,10 +13,6 @@ class DataSourceController < ApplicationController
 
     sleep 1
 
-    # TODO should default to json and only respond to json
-    respond_to do |format|
-      # TODO controller and format should be separate
-      format.json { render :json => { :row => @row, :col => @col, :value => @gdp.value }}
-    end
+    render :json => { :row => @row, :col => @col, :value => @gdp.value }
   end
 end

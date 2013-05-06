@@ -13,4 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree ./slickgrid
-//= require_tree ./jquerysheet
+//= require_tree ./jquerysheet_3.1r2_meta
