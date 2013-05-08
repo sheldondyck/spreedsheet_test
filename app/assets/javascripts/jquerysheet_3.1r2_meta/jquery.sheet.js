@@ -1,5 +1,4 @@
 /**
- * OI
  * @project jQuery.sheet() The Ajax Spreadsheet - http://code.google.com/p/jquerysheet/
  * @author RobertLeePlummerJr@gmail.com
  * $Id: jquery.sheet.js 770 2013-03-25 17:11:29Z RobertLeePlummerJr $
