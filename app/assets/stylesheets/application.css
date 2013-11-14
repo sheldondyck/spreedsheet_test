@@ -11,6 +11,7 @@
  *= require_self
  *= require bootstrap/bootstrap
  *= require pages
+ *= require tinysheet
  *= require_tree ./slickgrid
  *= require_tree ./jquerysheet_trunk
  */

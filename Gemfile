@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+ruby '2.0.0'
+gem 'rails', '4.0.1'
+
+# TODO had to downgrade multi_json and sass because rails refused to init.
+# Remove this line and try again later
+gem 'sass', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,7 +16,7 @@ gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'font-awesome-rails'
 gem 'haml_coffee_assets'
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'#, '~> 3.0.0'
 gem 'foreigner'
 
 group :development do
@@ -60,9 +65,9 @@ group :production do
 end
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'#,   '~> 3.2.3'
+  gem 'coffee-rails'#, '~> 3.2.1'
+  gem 'uglifier'#, '>= 1.0.3'
 end
 
 # Use unicorn as the app server
